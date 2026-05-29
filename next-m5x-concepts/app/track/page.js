@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { ConceptNav } from "@/components/ConceptNav";
-import { HoursTable } from "@/components/HoursTable";
-import { ParallaxBand } from "@/components/ParallaxBand";
-import { ServiceRail } from "@/components/ServiceRail";
+import { ConceptNav } from "../../components/ConceptNav";
+import { HoursTable } from "../../components/HoursTable";
+import { ParallaxBand } from "../../components/ParallaxBand";
+import { ServiceRail } from "../../components/ServiceRail";
 
 const serviceItems = [
   { title: "Diagnostics", copy: "Track down drivability issues with cleaner reporting and sharper communication." },
