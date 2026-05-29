@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ConceptNav } from "@/components/ConceptNav";
-import { HoursTable } from "@/components/HoursTable";
-import { ParallaxBand } from "@/components/ParallaxBand";
+import { ConceptNav } from "../../components/ConceptNav";
+import { HoursTable } from "../../components/HoursTable";
+import { ParallaxBand } from "../../components/ParallaxBand";
 
 const rows = [
   { day: "Mon - Thu", hours: "8:00 AM - 5:30 PM" },
