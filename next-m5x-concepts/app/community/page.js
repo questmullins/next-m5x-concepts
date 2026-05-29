@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ConceptNav } from "@/components/ConceptNav";
-import { HoursTable } from "@/components/HoursTable";
-import { ServiceRail } from "@/components/ServiceRail";
+import { ConceptNav } from "../../components/ConceptNav";
+import { HoursTable } from "../../components/HoursTable";
+import { ServiceRail } from "../../components/ServiceRail";
 
 const items = [
   { title: "BMW Focus", copy: "Lead with BMW experience while staying welcoming to other makes." },
