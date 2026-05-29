@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ConceptNav } from "@/components/ConceptNav";
+import { ConceptNav } from "../components/ConceptNav";
 
 const concepts = [
   {
