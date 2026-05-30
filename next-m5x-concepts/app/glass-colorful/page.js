@@ -9,34 +9,34 @@ import { FloatingSocials } from "../../components/FloatingSocials";
 
 const reviews = [
   {
-    quote: "The color gives it energy without making it childish. It feels fresh and current.",
+    quote: "The frosted background feels more intentional than the old dots, while the red still feels like M5X.",
     source: "Creative review"
   },
   {
-    quote: "It is still clean, but a lot more playful and memorable than the average shop site.",
+    quote: "The darker glass gives the site a performance-shop edge without making it heavy.",
     source: "Concept review"
   },
   {
-    quote: "This version feels optimistic, modern, and easier to remember after one pass.",
+    quote: "The texture feels like smoked acrylic instead of a decorative pattern.",
     source: "User reaction"
   }
 ];
 
 const faqs = [
   {
-    question: "Why use a brighter palette here?",
+    question: "Why use frosted glass here?",
     answer:
-      "This direction explores a friendlier, more energetic expression while still keeping the glass layout and modern motion."
+      "This direction keeps the modern glass layout, but replaces loose dot decoration with smoked translucent layers, soft blur, and subtle texture."
   },
   {
-    question: "Does colorful mean less premium?",
+    question: "Does it keep the M5X color?",
     answer:
-      "Not here. The goal is clean premium structure first, then strategic color through blur, gradients, and accent surfaces."
+      "Yes. The concept keeps the red accent and dark shop palette, using the color as diffused glow behind the glass instead of adding unrelated hues."
   },
   {
     question: "What is the best use case for this route?",
     answer:
-      "When the brand should feel memorable, lively, and more design-forward than a typical dark automotive site."
+      "When the site should feel more premium, technical, and polished than a typical dark automotive page."
   }
 ];
 
@@ -54,9 +54,9 @@ export default function GlassColorfulPage() {
 
       <section className="glass-text-feature" id="features">
         <Reveal className="glass-feature-intro">
-          <h2>More color. Same discipline.</h2>
+          <h2>Smoked glass. Same discipline.</h2>
           <p>
-            This route keeps the clean geometry and soft motion, then lets the palette and atmosphere do more of the personality work.
+            This route keeps the clean geometry and motion, then swaps random dot texture for frosted acrylic depth and restrained red glow.
           </p>
         </Reveal>
       </section>
@@ -94,9 +94,9 @@ export default function GlassColorfulPage() {
           />
         </Reveal>
         <Reveal className="glass-story-copy" delay={120}>
-          <h3>Friendly, vibrant, and more memorable.</h3>
+          <h3>Polished, technical, and more intentional.</h3>
           <p>
-            This is the route for a brighter, more welcoming personality while keeping the motion, transparency, and premium spacing intact.
+            This is the route for a darker, more premium personality while keeping the motion, transparency, and spacing intact.
           </p>
         </Reveal>
       </section>
@@ -104,7 +104,7 @@ export default function GlassColorfulPage() {
       <section className="reviews-section" id="reviews">
         <Reveal className="reviews-head">
           <h2>From the first reactions.</h2>
-          <p>Same moving review rail, now with a more expressive atmosphere.</p>
+          <p>Same moving review rail, now with a smoked frosted atmosphere.</p>
         </Reveal>
         <ReviewMarquee items={reviews} />
       </section>
