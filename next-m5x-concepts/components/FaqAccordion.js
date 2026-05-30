@@ -21,8 +21,10 @@ export function FaqAccordion({ items }) {
               <span>{item.question}</span>
               <strong>{isOpen ? "×" : "+"}</strong>
             </button>
-            <div className="faq-answer" hidden={!isOpen}>
-              <p>{item.answer}</p>
+            <div className="faq-answer" aria-hidden={!isOpen}>
+              <div className="faq-answer-inner">
+                <p>{item.answer}</p>
+              </div>
             </div>
           </article>
         );

@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "M5X Mechanix",
-  description: "Smoked frosted glass concept for M5X Mechanix."
+  description: "Fine frosted texture concept for M5X Mechanix."
 };
 
 export default function RootLayout({ children }) {

@@ -9,15 +9,15 @@ import { FloatingSocials } from "../../components/FloatingSocials";
 
 const reviews = [
   {
-    quote: "The frosted background feels more intentional than the old dots, while the red still feels like M5X.",
+    quote: "The tight texture feels more intentional than the old dots, while the red still feels like M5X.",
     source: "Creative review"
   },
   {
-    quote: "The darker glass gives the site a performance-shop edge without making it heavy.",
+    quote: "The diffusion gives the page atmosphere without taking over light or dark mode.",
     source: "Concept review"
   },
   {
-    quote: "The texture feels like smoked acrylic instead of a decorative pattern.",
+    quote: "The background reads like fine frosted grain instead of a decorative pattern.",
     source: "User reaction"
   }
 ];
@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "Why use frosted glass here?",
     answer:
-      "This direction keeps the modern glass layout, but replaces loose dot decoration with smoked translucent layers, soft blur, and subtle texture."
+      "This direction keeps the modern glass layout, but replaces loose dot decoration with tight noise, soft diffusion, and subtle texture."
   },
   {
     question: "Does it keep the M5X color?",
@@ -54,9 +54,9 @@ export default function GlassColorfulPage() {
 
       <section className="glass-text-feature" id="features">
         <Reveal className="glass-feature-intro">
-          <h2>Smoked glass. Same discipline.</h2>
+          <h2>Tight texture. Subtle diffusion.</h2>
           <p>
-            This route keeps the clean geometry and motion, then swaps random dot texture for frosted acrylic depth and restrained red glow.
+            This route keeps the clean geometry and motion, then swaps random dot texture for fine frosted grain and restrained red glow.
           </p>
         </Reveal>
       </section>
@@ -94,9 +94,9 @@ export default function GlassColorfulPage() {
           />
         </Reveal>
         <Reveal className="glass-story-copy" delay={120}>
-          <h3>Polished, technical, and more intentional.</h3>
+          <h3>Polished, light, and more intentional.</h3>
           <p>
-            This is the route for a darker, more premium personality while keeping the motion, transparency, and spacing intact.
+            This is the route for a softer, more premium texture while keeping the motion, transparency, and spacing intact.
           </p>
         </Reveal>
       </section>
@@ -104,7 +104,7 @@ export default function GlassColorfulPage() {
       <section className="reviews-section" id="reviews">
         <Reveal className="reviews-head">
           <h2>From the first reactions.</h2>
-          <p>Same moving review rail, now with a smoked frosted atmosphere.</p>
+          <p>Same moving review rail, now with a finer frosted texture.</p>
         </Reveal>
         <ReviewMarquee items={reviews} />
       </section>

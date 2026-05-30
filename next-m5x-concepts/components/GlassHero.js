@@ -21,10 +21,10 @@ export function GlassHero({ image, alt, variantClass = "" }) {
 
         const rect = root.getBoundingClientRect();
         const normalized = Math.max(-1, Math.min(1, rect.top / window.innerHeight));
-        const maxShift = root.offsetHeight * 0.05;
+        const maxShift = root.offsetHeight * 0.1;
         const shift = normalized * maxShift;
 
-        node.style.transform = `translate3d(0, ${-shift}px, 0) scale(1.04)`;
+        node.style.transform = `translate3d(0, ${-shift}px, 0) scale(1.15)`;
       });
     };
 
