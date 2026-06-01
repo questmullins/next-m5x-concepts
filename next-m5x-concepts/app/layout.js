@@ -2,7 +2,8 @@ import "./globals.css";
 
 export const metadata = {
   title: "M5X Mechanix",
-  description: "Fine frosted texture concept for M5X Mechanix."
+  description:
+    "M5X Mechanix is a BMW-focused automotive service shop in Fullerton, California offering diagnostics, maintenance, inspections, and performance work."
 };
 
 export default function RootLayout({ children }) {

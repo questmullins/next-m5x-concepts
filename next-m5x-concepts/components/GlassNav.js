@@ -33,7 +33,7 @@ function ThemeIcon({ isDark }) {
   );
 }
 
-export function GlassNav({ ctaHref, ctaLabel = "Schedule Service" }) {
+export function GlassNav({ ctaHref, ctaLabel = "Schedule Service", rootHref = "" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -90,11 +90,12 @@ export function GlassNav({ ctaHref, ctaLabel = "Schedule Service" }) {
 
   return (
     <header className="glass-header" id="top">
-      <nav className="glass-nav" aria-label="Glass concept navigation">
-        <Link href="#features" className="glass-nav-link">Features</Link>
-        <Link href="#reviews" className="glass-nav-link">Reviews</Link>
-        <Link href="#faq" className="glass-nav-link">FAQ</Link>
-        <Link href="#contact" className="glass-nav-link">Contact</Link>
+      <nav className="glass-nav" aria-label="M5X navigation">
+        <Link href={`${rootHref}#features`} className="glass-nav-link">Features</Link>
+        <Link href="/about" className="glass-nav-link">About</Link>
+        <Link href={`${rootHref}#reviews`} className="glass-nav-link">Reviews</Link>
+        <Link href={`${rootHref}#faq`} className="glass-nav-link">FAQ</Link>
+        <Link href={`${rootHref}#contact`} className="glass-nav-link">Contact</Link>
         <a className="glass-nav-cta" href={ctaHref}>
           {ctaLabel}
         </a>
@@ -135,10 +136,11 @@ export function GlassNav({ ctaHref, ctaLabel = "Schedule Service" }) {
         aria-modal="true"
         aria-hidden={!menuOpen}
       >
-        <Link href="#features" className="glass-mobile-link" onClick={closeMenu}>Features</Link>
-        <Link href="#reviews" className="glass-mobile-link" onClick={closeMenu}>Reviews</Link>
-        <Link href="#faq" className="glass-mobile-link" onClick={closeMenu}>FAQ</Link>
-        <Link href="#contact" className="glass-mobile-link" onClick={closeMenu}>Contact</Link>
+        <Link href={`${rootHref}#features`} className="glass-mobile-link" onClick={closeMenu}>Features</Link>
+        <Link href="/about" className="glass-mobile-link" onClick={closeMenu}>About</Link>
+        <Link href={`${rootHref}#reviews`} className="glass-mobile-link" onClick={closeMenu}>Reviews</Link>
+        <Link href={`${rootHref}#faq`} className="glass-mobile-link" onClick={closeMenu}>FAQ</Link>
+        <Link href={`${rootHref}#contact`} className="glass-mobile-link" onClick={closeMenu}>Contact</Link>
         <a className="glass-mobile-cta" href={ctaHref} onClick={closeMenu}>
           {ctaLabel}
         </a>

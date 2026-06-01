@@ -250,7 +250,7 @@ h4 {
   margin-top: 1rem;
   padding: 8rem 5rem 4rem;
   grid-template-columns: 1fr;
-  align-items: end;
+  align-items: flex-end;
   border-radius: 40px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 34px 80px rgba(74, 96, 133, 0.12);
@@ -2618,7 +2618,7 @@ h4 {
 
 .glass-services-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border-top: 1px solid rgba(17, 46, 58, 0.14);
 }
@@ -2628,6 +2628,7 @@ h4 {
   border-right: 1px solid rgba(17, 46, 58, 0.12);
 }
 
+.glass-service-item:nth-child(3n),
 .glass-service-item:last-child {
   border-right: 0;
 }
@@ -2649,6 +2650,7 @@ h4 {
 .theme-glass-colorful .glass-image-story,
 .theme-glass-colorful .reviews-section,
 .theme-glass-colorful .glass-faq,
+.theme-glass-colorful .glass-hours,
 .theme-glass-colorful .glass-contact {
   width: min(1320px, calc(100vw - 2rem));
 }
@@ -2700,6 +2702,10 @@ h4 {
     gap: 1rem 0;
   }
 
+  .glass-service-item:nth-child(3n) {
+    border-right: 1px solid rgba(17, 46, 58, 0.12);
+  }
+
   .glass-service-item:nth-child(2n) {
     border-right: 0;
   }
@@ -2727,6 +2733,7 @@ h4 {
   .theme-glass-colorful .glass-image-story,
   .theme-glass-colorful .reviews-section,
   .theme-glass-colorful .glass-faq,
+  .theme-glass-colorful .glass-hours,
   .theme-glass-colorful .glass-contact {
     width: min(100vw - 1.5rem, calc(100vw - 1.5rem));
   }
@@ -2943,6 +2950,7 @@ body[data-glass-mode="dark"] .theme-glass-colorful::after,
 .theme-glass-colorful .glass-image-story,
 .theme-glass-colorful .reviews-section,
 .theme-glass-colorful .glass-faq,
+.theme-glass-colorful .glass-hours,
 .theme-glass-colorful .glass-contact {
   width: min(1320px, calc(100vw - 2.5rem));
 }
@@ -2953,6 +2961,10 @@ body[data-glass-mode="dark"] .theme-glass-colorful::after,
 .theme-glass-colorful .faq-head h2,
 .theme-glass-colorful .glass-story-copy h3,
 .theme-glass-colorful .glass-contact-head h2,
+.theme-glass-colorful .glass-hours-copy h2,
+.theme-glass-colorful .glass-about-hero-copy h1,
+.theme-glass-colorful .glass-about-panel h2,
+.theme-glass-colorful .glass-value-card h3,
 .theme-glass-colorful .review-card p,
 .theme-glass-colorful .faq-trigger {
   color: var(--glass-text-strong);
@@ -2964,6 +2976,11 @@ body[data-glass-mode="dark"] .theme-glass-colorful::after,
 .theme-glass-colorful .glass-story-copy p,
 .theme-glass-colorful .review-card span,
 .theme-glass-colorful .glass-contact-head p,
+.theme-glass-colorful .glass-hours-copy p,
+.theme-glass-colorful .glass-hours-row strong,
+.theme-glass-colorful .glass-about-hero-copy p,
+.theme-glass-colorful .glass-about-panel p,
+.theme-glass-colorful .glass-value-card p,
 .theme-glass-colorful .glass-service-form label span,
 .theme-glass-colorful .glass-service-form input,
 .theme-glass-colorful .glass-service-form textarea {
@@ -2986,6 +3003,291 @@ body[data-glass-mode="dark"] .theme-glass-colorful::after,
 
 .theme-glass-colorful .glass-service-item p {
   color: var(--glass-text-muted);
+}
+
+.glass-hours {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(20rem, 1.05fr);
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-inline: auto;
+  padding: 1.5rem 0 3.5rem;
+}
+
+.glass-hours-copy,
+.glass-hours-card,
+.glass-about-panel,
+.glass-value-card {
+  border: 1px solid var(--glass-border);
+  border-radius: 2rem;
+  background: var(--glass-surface);
+  box-shadow: var(--glass-inset), var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.glass-hours-copy {
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.glass-hours-copy h2 {
+  max-width: 12ch;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.glass-hours-copy p:last-child {
+  max-width: 36rem;
+  margin-top: 1rem;
+  line-height: 1.65;
+}
+
+.glass-hours-card {
+  padding: 1rem;
+}
+
+.glass-hours-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  min-height: 3.3rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid rgba(120, 134, 150, 0.2);
+}
+
+.glass-hours-row:last-child {
+  border-bottom: 0;
+}
+
+.glass-hours-row span {
+  color: var(--glass-accent);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.glass-hours-row strong {
+  font-weight: 700;
+  text-align: right;
+}
+
+.glass-shop-gallery,
+.glass-about-hero,
+.glass-about-story,
+.glass-about-values,
+.glass-about-gallery {
+  width: min(1320px, calc(100vw - 2.5rem));
+  margin: 0 auto;
+}
+
+.glass-shop-gallery {
+  padding: 2rem 0 2.5rem;
+}
+
+.glass-shop-gallery-head {
+  max-width: 54rem;
+  margin: 0 auto 1.35rem;
+  text-align: center;
+}
+
+.glass-shop-gallery-head h2,
+.glass-about-values-head h2 {
+  color: var(--glass-text-strong);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.glass-shop-gallery-head p:last-child,
+.glass-about-values-head p:last-child {
+  margin-top: 0.75rem;
+  color: var(--glass-text-muted);
+  line-height: 1.65;
+}
+
+.glass-shop-gallery-grid,
+.glass-about-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.glass-shop-gallery-card,
+.glass-about-gallery-card {
+  position: relative;
+  min-height: 20rem;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(7, 17, 28, 0.14);
+}
+
+.glass-shop-gallery-card img,
+.glass-about-gallery-card img {
+  object-fit: cover;
+}
+
+.glass-shop-gallery-card span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(10, 16, 22, 0.68);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+}
+
+.glass-about-hero {
+  position: relative;
+  min-height: min(78svh, 54rem);
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 2.2rem;
+  overflow: hidden;
+}
+
+.glass-about-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 58rem;
+  padding: clamp(2rem, 6vw, 5rem);
+}
+
+.glass-about-hero-copy h1 {
+  max-width: 11ch;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3.6rem, 7vw, 6.8rem);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+}
+
+.glass-about-hero-copy p:last-child {
+  max-width: 38rem;
+  margin-top: 1.1rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.glass-about-hero-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.glass-about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(7, 16, 20, 0.84), rgba(7, 16, 20, 0.28) 68%, rgba(7, 16, 20, 0.12)),
+    linear-gradient(0deg, rgba(7, 16, 20, 0.52), rgba(7, 16, 20, 0.04) 60%);
+}
+
+.theme-glass-colorful .glass-about-hero-copy h1 {
+  color: #ffffff;
+}
+
+.theme-glass-colorful .glass-about-hero-copy p:last-child {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.glass-about-cta {
+  display: inline-flex;
+  margin-top: 1.4rem;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  background: var(--glass-accent);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.glass-about-story {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1.25rem;
+  padding: 3rem 0 1.5rem;
+}
+
+.glass-about-story-media {
+  position: relative;
+  min-height: 34rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.glass-about-story-media img {
+  object-fit: cover;
+}
+
+.glass-about-panel {
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.glass-about-panel h2 {
+  max-width: 11ch;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.glass-about-panel p {
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+.glass-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.glass-about-values {
+  padding: 2rem 0 1.5rem;
+}
+
+.glass-about-values-head {
+  max-width: 54rem;
+  margin: 0 auto 1.2rem;
+  text-align: center;
+}
+
+.glass-value-card {
+  padding: 1.35rem;
+}
+
+.glass-value-card span {
+  display: inline-block;
+  margin-bottom: 1.35rem;
+  color: var(--glass-accent);
+  font-weight: 900;
+}
+
+.glass-value-card h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.glass-value-card p {
+  line-height: 1.6;
+}
+
+.glass-about-gallery {
+  padding: 1.5rem 0 3rem;
+}
+
+.glass-about-gallery-card:nth-child(2) {
+  min-height: 25rem;
 }
 
 .theme-glass-colorful .glass-story-card {
@@ -3144,6 +3446,12 @@ body[data-glass-mode="dark"] .theme-glass-colorful .glass-service-form textarea 
   .theme-glass-colorful .glass-image-story,
   .theme-glass-colorful .reviews-section,
   .theme-glass-colorful .glass-faq,
+  .theme-glass-colorful .glass-hours,
+  .glass-shop-gallery,
+  .glass-about-hero,
+  .glass-about-story,
+  .glass-about-values,
+  .glass-about-gallery,
   .theme-glass-colorful .glass-contact {
     width: min(100vw - 2rem, calc(100vw - 2rem));
   }
@@ -3181,6 +3489,40 @@ body[data-glass-mode="dark"] .theme-glass-colorful .glass-service-form textarea 
   .glass-theme-toggle {
     right: 0.85rem;
     bottom: 0.85rem;
+  }
+
+  .glass-hours,
+  .glass-about-story,
+  .glass-value-grid,
+  .glass-shop-gallery-grid,
+  .glass-about-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-about-hero {
+    min-height: 34rem;
+  }
+
+  .glass-about-hero-copy {
+    padding: 1.5rem;
+  }
+
+  .glass-about-panel h2 {
+    margin-inline: auto;
+  }
+
+  .glass-about-story-media {
+    min-height: 22rem;
+  }
+
+  .glass-hours-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .glass-hours-row strong {
+    text-align: left;
   }
 }
 
